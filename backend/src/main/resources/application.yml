@@ -1,0 +1,24 @@
+spring:
+  application:
+    name: my-data-portal-backend
+  datasource:
+    url: ${DB_URL:jdbc:postgresql://localhost:5432/mydataportal}
+    username: ${DB_USERNAME:portal_user}
+    password: ${DB_PASSWORD:portal_password}
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    open-in-view: false
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        format_sql: true
+
+mybatis:
+  mapper-locations: classpath*:mapper/**/*.xml
+  type-aliases-package: com.garfield.mydataportal
+  configuration:
+    map-underscore-to-camel-case: true
+
+server:
+  port: 8080

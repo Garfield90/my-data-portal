@@ -1,0 +1,25 @@
+spring:
+  application:
+    name: my-data-portal-batch
+  main:
+    web-application-type: none
+  datasource:
+    url: ${DB_URL:jdbc:postgresql://localhost:5432/mydataportal}
+    username: ${DB_USERNAME:portal_user}
+    password: ${DB_PASSWORD:portal_password}
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    open-in-view: false
+    hibernate:
+      ddl-auto: update
+  batch:
+    jdbc:
+      initialize-schema: always
+    job:
+      enabled: true
+
+mybatis:
+  mapper-locations: classpath*:mapper/**/*.xml
+  type-aliases-package: com.garfield.mydataportal.batch
+  configuration:
+    map-underscore-to-camel-case: true

@@ -1,0 +1,38 @@
+# OS & IDE
+.DS_Store
+.idea/
+*.iml
+.vscode/
+
+# Frontend & UI Prototype (Node / Vite)
+frontend/node_modules/
+frontend/dist/
+frontend/dist-ssr/
+frontend/*.local
+frontend/.env.local
+frontend/.env.*.local
+ui-prototype/node_modules/
+ui-prototype/dist/
+ui-prototype/dist-ssr/
+ui-prototype/*.local
+
+# Backend & Batch (Gradle / Spring Boot / Java)
+backend/.gradle/
+backend/build/
+backend/out/
+backend/bin/
+!backend/gradle/wrapper/gradle-wrapper.jar
+batch/.gradle/
+batch/build/
+batch/out/
+batch/bin/
+!batch/gradle/wrapper/gradle-wrapper.jar
+*.log
+
+# Docker / Local Data
+.postgres-data/
+.env
+
+# AI Workspace Rules (Local Only)
+GEMINI.md
+.agents/
